@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
-    <title>Admincast bootstrap 4 &amp; angular 5 admin template, Шаблон админки | Register</title>
+    <title>CUGI  &amp; Mama | Log in</title>
     <!-- GLOBAL MAINLY STYLES-->
     <link href="./assets/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="./assets/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
@@ -19,41 +19,33 @@
 <body class="bg-silver-300">
     <div class="content">
         <div class="brand">
-            <a class="link" href="index.html">AdminCAST</a>
+            <a class="link" href="index.php">CUGI Mama</a>
         </div>
-        <form id="register-form" action="javascript:;" method="post">
-            <h2 class="login-title">Sign Up</h2>
-            <div class="row">
-                <div class="col-6">
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="first_name" placeholder="First Name">
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="last_name" placeholder="Last Name">
-                    </div>
+        <form id="login-form" action="javascript:;" method="post">
+            <h2 class="login-title">Log in</h2>
+            <div class="form-group">
+                <div class="input-group-icon right">
+                    <div class="input-icon"><i class="fa fa-envelope"></i></div>
+                    <input class="form-control" type="email" name="email" placeholder="Email" autocomplete="off">
                 </div>
             </div>
             <div class="form-group">
-                <input class="form-control" type="email" name="email" placeholder="Email" autocomplete="off">
+                <div class="input-group-icon right">
+                    <div class="input-icon"><i class="fa fa-lock font-16"></i></div>
+                    <input class="form-control" type="password" name="password" placeholder="Password">
+                </div>
             </div>
-            <div class="form-group">
-                <input class="form-control" id="password" type="password" name="password" placeholder="Password">
-            </div>
-            <div class="form-group">
-                <input class="form-control" type="password" name="password_confirmation" placeholder="Confirm Password">
-            </div>
-            <div class="form-group text-left">
+            <div class="form-group d-flex justify-content-between">
                 <label class="ui-checkbox ui-checkbox-info">
-                    <input type="checkbox" name="agree">
-                    <span class="input-span"></span>I agree the terms and policy</label>
+                    <input type="checkbox">
+                    <span class="input-span"></span>Remember me</label>
+                <a href="forgot_password.php">Forgot password?</a>
             </div>
             <div class="form-group">
-                <button class="btn btn-info btn-block" type="submit">Sign up</button>
+                <button class="btn btn-info btn-block" type="submit">Login</button>
             </div>
             <div class="social-auth-hr">
-                <span>Or Sign up with</span>
+                <span>Or login with</span>
             </div>
             <div class="text-center social-auth m-b-20">
                 <a class="btn btn-social-icon btn-twitter m-r-5" href="javascript:;"><i class="fa fa-twitter"></i></a>
@@ -62,8 +54,8 @@
                 <a class="btn btn-social-icon btn-linkedin m-r-5" href="javascript:;"><i class="fa fa-linkedin"></i></a>
                 <a class="btn btn-social-icon btn-vk" href="javascript:;"><i class="fa fa-vk"></i></a>
             </div>
-            <div class="text-center">Already a member?
-                <a class="color-blue" href="login.html">Login here</a>
+            <div class="text-center">Not a member?
+                <a class="color-blue" href="register.php">Create accaunt</a>
             </div>
         </form>
     </div>
@@ -84,27 +76,15 @@
     <!-- PAGE LEVEL SCRIPTS-->
     <script type="text/javascript">
         $(function() {
-            $('#register-form').validate({
+            $('#login-form').validate({
                 errorClass: "help-block",
                 rules: {
-                    first_name: {
-                        required: true,
-                        minlength: 2
-                    },
-                    last_name: {
-                        required: true,
-                        minlength: 2
-                    },
                     email: {
                         required: true,
                         email: true
                     },
                     password: {
-                        required: true,
-                        confirmed: true
-                    },
-                    password_confirmation: {
-                        equalTo: password
+                        required: true
                     }
                 },
                 highlight: function(e) {

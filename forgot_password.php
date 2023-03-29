@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
-    <title>Admincast bootstrap 4 &amp; angular 5 admin template, Шаблон админки | Forgot password</title>
+    <title>CUGI  &amp; Mama | Forgot Password</title>
     <!-- GLOBAL MAINLY STYLES-->
     <link href="./assets/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- THEME STYLES-->
@@ -17,7 +17,7 @@
 <body class="bg-silver-300">
     <div class="content">
         <div class="brand">
-            <a class="link" href="index.html">AdminCAST</a>
+            <a class="link" href="index.html">CUGI Mama</a>
         </div>
         <form id="forgot-form" action="javascript:;" method="post">
             <h3 class="m-t-10 m-b-10">Forgot password</h3>
