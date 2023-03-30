@@ -21,7 +21,7 @@
         <div class="brand">
             <a class="link" href="index.php">CUGI Mama</a>
         </div>
-        <form id="register-form" action="javascript:;" method="post">
+        <form id="register-form" action="server/registeruser.php" method="post">
             <h2 class="login-title">Sign Up</h2>
             <div class="row">
                 <div class="col-6">
